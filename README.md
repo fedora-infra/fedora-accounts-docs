@@ -63,3 +63,58 @@ The result will be available at http://localhost:8080
 $ sudo dnf install docker
 $ sudo systemctl start docker && sudo systemctl enable docker
 ```
+
+### Preview as a part of the whole Fedora Docs site
+
+You can also build the whole Fedora Docs site locally to see your changes in the whole context.
+This is especially useful for checking if your `xref` links work properly.
+
+To do this, you need to clone the main [Fedora Docs build repository](https://pagure.io/fedora-docs/docs-fp-o), modify the `site.yml` file to reference a repo with your changes, and build it.
+Steps:
+
+Clone the main repository and cd into it:
+
+```
+$ git clone https://pagure.io/fedora-docs/docs-fp-o.git
+$ cd docs-fp-o
+```
+
+Find a reference to the repository you're changing in the `site.yml` file, and change it so it points to your change.
+So for example, if I made a modification to the Modularity docs, I would find:
+
+```
+...
+   - url: https://pagure.io/fedora-docs/modularity.git
+     branches:
+       - master
+...
+```
+
+And replaced it with a pointer to my fork:
+```
+...
+   - url: https://pagure.io/forks/asamalik/fedora-docs/modularity.git
+     branches:
+       - master
+...
+```
+
+I could also point to a local repository, using `HEAD` as a branch to preview the what's changed without the need of making a commit.
+
+**Note:** I would need to move the repository under the `docs-fp-o` directory, because the builder won't see anything above.
+So I would need to create a `repositories` directory in `docs-fp-o` and copy my repository into it.
+
+```
+...
+   - url: ./repositories/modularity
+     branches:
+       - HEAD
+...
+```
+
+To build the whole site, I would run the following in the `docs-fp-o` directory.
+
+```
+$ ./build.sh && ./preview.sh
+```
+
