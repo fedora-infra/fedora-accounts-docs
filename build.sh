@@ -14,13 +14,14 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Check if the current user is in the "docker" group. If true, no sudo is needed.
         echo ""
         echo "This build script is using Docker to run the build in an isolated environment."
+        echo ""
         docker run --rm -it -v $(pwd):/antora:z antora/antora --html-url-extension-style=indexify site.yml
     else
         # User isn't in the docker group; run the command with sudo.
         echo ""
-        echo "This build script is using Docker to run the build in an isolated environment.
-        You might be asked for a root password in order to start it.
-        Add your user to the docker group to avoid this."
+        echo "This build script is using Docker to run the build in an isolated environment. You might be asked for your password." 
+        echo "You can avoid this by adding your user to the 'docker' group, but be aware of the security implications. See https://docs.docker.com/install/linux/linux-postinstall/."
+        echo ""
         sudo docker run --rm -it -v $(pwd):/antora:z antora/antora --html-url-extension-style=indexify site.yml
     fi
 fi
