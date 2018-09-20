@@ -11,8 +11,18 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Running on Linux.
     # Let's assume that it's running the Docker deamon
     # which requires root.
-    echo ""
-    echo "This build script is using Docker to run the build in an isolated environment. You might be asked for a root password in order to start it."
-    echo "The preview will be available at http://localhost:8080/"
-    sudo docker run --rm -v $(pwd):/antora:ro,z -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro,z -p 8080:80 nginx
+    if groups | grep -wq "docker"; then
+        # Check if the current user is in the "docker" group. If true, no sudo is needed.
+        echo ""
+        echo "This build script is using Docker to run the build in an isolated environment."
+        echo "The preview will be available at http://localhost:8080/"
+        docker run --rm -v $(pwd):/antora:ro,z -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro,z -p 8080:80 nginx
+    else
+        # User isn't in the docker group; run the command with sudo.
+        echo "This build script is using Docker to run the build in an isolated environment.
+        You might be asked for a root password in order to start it.
+        Add your user to the docker group to avoid this."
+        echo "The preview will be available at http://localhost:8080/"
+        sudo docker run --rm -v $(pwd):/antora:ro,z -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro,z -p 8080:80 nginx
+    fi
 fi
