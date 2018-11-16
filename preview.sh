@@ -9,28 +9,9 @@ if [ "$(uname)" == "Darwin" ]; then
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Running on Linux.
-    # Check whether podman is available, else faill back to docker
-    # which requires root.
-    if [ -f /usr/bin/podman ]; then
-        runtime="podman"
-    else
-	runtime="docker"
-    fi
-    if groups | grep -wq "docker"; then
-        # Check if the current user is in the "docker" group. If true, no sudo is needed.
-        echo ""
-        echo "This build script is using $runtime to run the build in an isolated environment."
-        echo "The preview will be available at http://localhost:8080/"
-        echo ""
-        $runtime run --rm -v $(pwd):/antora:ro,z -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro,z -p 8080:80 nginx
-    else
-        # User isn't in the docker group; run the command with sudo.
-        echo ""
-        echo "This build script is using $runtime to run the build in an isolated environment. You might be asked for your password."
-        echo "You can avoid this by adding your user to the 'docker' group, but be aware of the security implications. See https://docs.docker.com/install/linux/linux-postinstall/."
-        echo ""
-        echo "The preview will be available at http://localhost:8080/"
-        echo ""
-        sudo $runtime run --rm -v $(pwd):/antora:ro,z -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro,z -p 8080:80 nginx
-    fi
+    # Fedora Workstation has python3 installed as a default, so using that
+    echo ""
+    echo "The preview is available at http://localhost:8080"
+    echo ""
+    python3 -m http.server --directory ./public 8080
 fi

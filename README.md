@@ -47,7 +47,7 @@ This repo includes scripts to build and preview the contents of this repository.
 
 **NOTE**: Please note that if you reference pages from other repositoreis, such links will be broken in this local preview as it only builds this repository. If you want to rebuild the whole Fedora Docs site, please see [the Fedora Docs build repository](https://pagure.io/fedora-docs/docs-fp-o/) for instructions.
 
-Both scripts use docker, so please make sure you have it installed on your system. Please see below for instructions.
+Both scripts work on Fedora (using Podman) and macOS (using Docker).
 
 To build and preview the site, run:
 
@@ -57,11 +57,12 @@ $ ./build.sh && ./preview.sh
 
 The result will be available at http://localhost:8080
 
-### Installing docker on Fedora
+### Installing Podman on Fedora
+
+Fedora Workstation doesn't come with Podman preinstalled by default — so you might need to install it using the following command:
 
 ```
-$ sudo dnf install docker
-$ sudo systemctl start docker && sudo systemctl enable docker
+$ sudo dnf install podman
 ```
 
 ### Preview as a part of the whole Fedora Docs site
