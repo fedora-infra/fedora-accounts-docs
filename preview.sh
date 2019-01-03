@@ -13,5 +13,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo ""
     echo "The preview is available at http://localhost:8080"
     echo ""
-    python3 -m http.server --directory ./public 8080
+    cd ./public
+    python3 -m http.server 8080
 fi
