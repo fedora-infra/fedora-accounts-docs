@@ -22,7 +22,7 @@ This repository contains a minimal source structure for a new Fedora Docs source
             |-- faq.adoc
             |-- index.adoc
             |-- pizza-dough.adoc
-            `-- pizza-owen.adoc
+            `-- pizza-oven.adoc
 ```
 
 1. Metadata definition.
@@ -118,4 +118,3 @@ To build the whole site, I would run the following in the `docs-fp-o` directory.
 ```
 $ ./build.sh && ./preview.sh
 ```
-
