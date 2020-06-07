@@ -3,7 +3,7 @@
 image="docker.io/antora/antora"
 cmd="--html-url-extension-style=indexify site.yml"
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     # Running on macOS.
     # Let's assume that the user has the Docker CE installed
     # which doesn't require a root password.
@@ -12,7 +12,7 @@ if [ "$(uname)" == "Darwin" ]; then
     echo ""
     docker run --rm -it -v $(pwd):/antora $image $cmd
 
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
     # Running on Linux.
     # Check whether podman is available, else faill back to docker
     # which requires root.
