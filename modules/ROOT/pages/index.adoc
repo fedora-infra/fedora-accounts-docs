@@ -1,9 +1,16 @@
-= The Pizza Project
-John Doe; Jane Doe
-:page-authors: {author}, {author_2}
 
-The Pizza Project is a useful project with a very bad name — it helps you with writing some new documentation for Fedora.
+= Fedora Accounts
 
-In fact, this is just a source template for a new piece of the Fedora Docs.
+*Fedora Accounts* is the primary source of accounts for Fedora Project contributors. 
+The majority of applications and services used by Fedora Project contributors require a Fedora Account.
+Additionally,  it is used to grant authentication and authorization through the use of group membership.
 
-image::pizza.png[Pizza]
+[#history]
+== History
+The current iteration of Fedora Accounts launched at the start of 2021, and is an entirely new system that uses the Noggin frontend, and FreeIPA behind the scenes.
+
+image:screenshots/newaccount3.png[A screenshot of the Fedora Accounts web UI]
+
+Prior to this launch, Fedora Contributors managed their accounts using the Fedora Accounts System (FAS2), which came into service in 2008.
+
+image:screenshots/fas2.png[A screenshot of the old FAS2 system]

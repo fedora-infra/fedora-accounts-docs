@@ -1,5 +1,14 @@
-* xref:architecture.adoc[Architecture]
-** xref:pizza-oven.adoc[Pizza Oven]
-** xref:pizza-dough.adoc[Pizza Dough]
-* xref:community.adoc[Community]
-* xref:faq.adoc[FAQ]
+* xref:index.adoc#history[Brief History]
+* xref:user.adoc[Using Fedora Accounts]
+** xref:user.adoc#newaccounts[Creating an account]
+** xref:user.adoc#twofactor[Two-Factor Authentication (2FA)]
+** xref:user.adoc#join-group[Joining a group]
+** xref:user.adoc#leave-group[Leaving a group]
+** xref:user.adoc#sponsorwhat[What is a sponsor]
+** xref:user.adoc#becomingasponsor[Becoming a sponsor]
+** xref:user.adoc#stopbeingasponsor[Stop being a sponsor]
+** xref:user.adoc#addingmembers[Add members to a group]
+** xref:user.adoc#removingmembers[Removing members from a group]
+
+
+
