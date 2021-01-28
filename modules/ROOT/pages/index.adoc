@@ -1,6 +1,12 @@
 
 = Fedora Accounts
 
+[NOTE]
+====
+Fedora Accounts is not yet live in production. You can try it out in staging at:
+https://admin.stg.fedoraproject.org/accounts/
+====
+
 *Fedora Accounts* is the primary source of accounts for Fedora Project contributors. 
 The majority of applications and services used by Fedora Project contributors require a Fedora Account.
 Additionally,  it is used to grant authentication and authorization through the use of group membership.
