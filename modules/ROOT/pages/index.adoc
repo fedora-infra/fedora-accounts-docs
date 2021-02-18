@@ -15,7 +15,7 @@ Additionally,  it is used to grant authentication and authorization through the 
 == History
 The current iteration of Fedora Accounts launched at the start of 2021, and is an entirely new system that uses the Noggin frontend, and FreeIPA behind the scenes.
 
-image:screenshots/newaccount3.png[A screenshot of the Fedora Accounts web UI]
+image:screenshots/fedora-accounts.png[A screenshot of the Fedora Accounts web UI]
 
 Prior to this launch, Fedora Contributors managed their accounts using the Fedora Accounts System (FAS2), which came into service in 2008.
 
