@@ -17,12 +17,10 @@ Additionally, it is used to grant authentication and authorization through the u
 
 The current iteration of Fedora Accounts / CentOS Accounts launched at the start of 2021, and is an entirely new system that uses the Noggin frontend, and FreeIPA behind the scenes.
 
-The Fedora Accounts theme:
-
+.The Fedora Accounts theme
 image:screenshots/fedora-accounts.png[A screenshot of the Fedora Accounts web UI]
 
-The CentOS Accounts theme:
-
+.The CentOS Accounts theme
 image:screenshots/centos-accounts.png[A screenshot of the CentOS Accounts web UI]
 
 
