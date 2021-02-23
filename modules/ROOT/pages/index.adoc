@@ -1,4 +1,3 @@
-
 = Fedora Accounts / CentOS Accounts
 
 [NOTE]
@@ -10,32 +9,6 @@ https://admin.stg.fedoraproject.org/accounts/
 *Fedora Accounts* and *CentOS Accounts* is the primary source of accounts for Fedora Project and CentOS contributors. 
 The majority of applications and services used by the Fedora Project and CentOS contributors require a Fedora / CentOS Account.
 Additionally, it is used to grant authentication and authorization through the use of group membership.
-
-
-[#history]
-== History
-
-The current iteration of Fedora Accounts / CentOS Accounts launched at the start of 2021, and is an entirely new system that uses the Noggin frontend, and FreeIPA behind the scenes.
-
-.The Fedora Accounts theme
-image:screenshots/fedora-accounts.png[A screenshot of the Fedora Accounts web UI]
-
-.The CentOS Accounts theme
-image:screenshots/centos-accounts.png[A screenshot of the CentOS Accounts web UI]
-
-
-Prior to this launch, Fedora Project and CentOS contributors managed their accounts using two seperate instances of the Fedora Accounts System (FAS2) software, which came into service for the Fedora Project in 2008.
-
-image:screenshots/fas2.png[A screenshot of the old FAS2 system]
-
-== Fedora and CentOS Accounts
-
-Prior to the launch of Fedora Accounts / CentOS Accounts, both the Fedora and CentOS communities ran seperate instances of the FAS2 software.
-A user that contributed to both communities was required to have two seperate accounts. 
-
-With the migration away from FAS2 to Fedora Accounts / CentOS Accounts, these services use the same FreeIPA backend, and each community has its own branded frontend.
-Additionally users that had accounts on both the Fedora FAS2 and CentOS FAS2 have had their accounts merged in the new system. 
-
 
 [NOTE]
 ====
