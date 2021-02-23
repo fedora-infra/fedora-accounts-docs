@@ -1,4 +1,3 @@
-* xref:index.adoc#history[Brief History]
 * xref:user.adoc[Using Fedora Accounts]
 ** xref:user.adoc#newaccounts[Creating an account]
 ** xref:user.adoc#join-group[Joining a group]
@@ -10,3 +9,4 @@
 ** xref:user.adoc#removingmembers[Removing members from a group]
 ** xref:user.adoc#twofactor[Two-Factor Authentication (2FA)]
 ** xref:user.adoc#pkinit[Kerberos Authentication & 2FA]
+* xref:history.adoc#history[Brief History]
