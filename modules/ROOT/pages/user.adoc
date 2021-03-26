@@ -62,7 +62,14 @@ authentication enabled:
 
 Install the `fedora-packager` package from the Fedora repositories:
 
- sudo dnf install fedora-packager
+ sudo dnf install 'fedora-packager >= 0.6.0.5'
+
+[NOTE]
+====
+For the time being, you might need to enable the updates-testing repository:
+
+ sudo dnf --enablerepo=updates-testing install 'fedora-packager >= 0.6.0.5'
+====
 
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
@@ -75,6 +82,14 @@ request a new kerberos ticket
 
  kinit -n @FEDORAPROJECT.ORG -c FILE:armor.ccache
 
+[NOTE]
+====
+If you see this request:
+
+ Password for WELLKNOWN/ANONYMOUS@FEDORAPROJECT.ORG:
+
+Make sure your `fedora-packager` version is at least `0.6.0.5` 
+====
 
 === 3. Request the kerberos ticket
 
