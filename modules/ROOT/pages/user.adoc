@@ -66,7 +66,7 @@ Install / Update the `fedora-packager` package from the Fedora repositories:
 
 [NOTE]
 ====
-If you have previously installed `fedora-packager`, ensure you update it to the most recent version.
+If you have previously installed `fedora-packager`, ensure you update it to the most recent version (`fedora-packager-0.6.0.5-1`) or later.
 The newest version contains updates to ensure this procedure works with Fedora Accounts, and adds
 `krb5-pkinit` as a new dependency of `fedora-packager`
 ====
@@ -84,7 +84,7 @@ request a new kerberos ticket
 
 Note that this command should not prompt you for a password. If this command returns
 `Password for WELLKNOWN/ANONYMOUS@FEDORAPROJECT.ORG:` please double-check that 
-`fedora-packager` is updated to the most recent version.
+`fedora-packager` is updated to the most recent version (`fedora-packager-0.6.0.5-1`) or later.
 
 === 3. Request the kerberos ticket
 
