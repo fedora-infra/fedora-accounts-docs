@@ -58,11 +58,18 @@ with kinit. Running kinit without this configuration will result in the followin
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
-=== 1. Install `fedora-packager`
+=== 1. Install / Update `fedora-packager`
 
-Install the `fedora-packager` package from the Fedora repositories:
+Install / Update the `fedora-packager` package from the Fedora repositories:
 
  sudo dnf install fedora-packager
+
+[NOTE]
+====
+If you have previously installed `fedora-packager`, ensure you update it to the most recent version.
+The newest version contains updates to ensure this procedure works with Fedora Accounts, and adds
+`krb5-pkinit` as a new dependency of `fedora-packager`
+====
 
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
@@ -75,6 +82,9 @@ request a new kerberos ticket
 
  kinit -n @FEDORAPROJECT.ORG -c FILE:armor.ccache
 
+Note that this command should not prompt you for a password. If this command returns
+`Password for WELLKNOWN/ANONYMOUS@FEDORAPROJECT.ORG:` please double-check that 
+`fedora-packager` is updated to the most recent version.
 
 === 3. Request the kerberos ticket
 
