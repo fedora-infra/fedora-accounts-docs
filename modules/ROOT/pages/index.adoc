@@ -1,17 +1,11 @@
 = Fedora Accounts / CentOS Accounts
 
-[NOTE]
-====
-Fedora Accounts / CentOS Accounts is not yet live in production. You can try it out in staging at:
-https://admin.stg.fedoraproject.org/accounts/
-====
-
 *Fedora Accounts* and *CentOS Accounts* is the primary source of accounts for Fedora Project and CentOS contributors. 
 The majority of applications and services used by the Fedora Project and CentOS contributors require a Fedora / CentOS Account.
 Additionally, it is used to grant authentication and authorization through the use of group membership.
 
 [NOTE]
 ====
-A User can log in with your account at either https://admin.fedoraproject.org/accounts/ or https://accounts.centos.org/ and apart from the theming, it will be identical. 
+A User can log in with your account at either https://accounts.fedoraproject.org/ or https://accounts.centos.org/ and apart from the theming, it will be identical. 
 Any changes made on either system are reflected instantly on the other system.
 ====
