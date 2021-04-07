@@ -11,6 +11,8 @@ image:screenshots/centos-accounts.png[A screenshot of the CentOS Accounts web UI
 
 Prior to this launch, Fedora Project and CentOS contributors managed their accounts using two seperate instances of the Fedora Accounts System (FAS2) software, which came into service for the Fedora Project in 2008.
 
+After the migration to the new Fedora Accounts, a read-only version of the Fedora FAS2 instance remains at https://admin.fedoraproject.org/accounts/
+
 image:screenshots/fas2.png[A screenshot of the old FAS2 system]
 
 == Fedora and CentOS Accounts

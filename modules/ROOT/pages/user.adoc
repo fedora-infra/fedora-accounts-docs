@@ -3,7 +3,7 @@
 [#newaccounts]
 == How do I create a new account?
 
-To create a new account, go to the home page (either for https://admin.fedoraproject.org/accounts[Fedora Accounts] or https://admin.fedoraproject.org/accounts[CentOS accounts]) 
+To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
 
 image:screenshots/newaccount1.png[image]
