@@ -25,7 +25,9 @@ image:screenshots/newaccount3.png[image]
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
 generates Time-based One-time Password (TOTP) tokens, which can be used
-with authentication apps such as https://freeotp.github.io/[FreeOTP].
+with authentication apps such as https://freeotp.github.io/[FreeOTP]
+(Android - Apple) or
+https://github.com/jamie-mh/AuthenticatorPro[AuthenticatorPro] (Android).
 
 To create an OTP token, go to the OTP tab in the user settings, and click the *Add OTP Token* button:
 
